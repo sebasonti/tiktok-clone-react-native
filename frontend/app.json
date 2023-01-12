@@ -1,0 +1,43 @@
+{
+  "expo": {
+    "name": "frontend",
+    "slug": "frontend",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+        "favicon": "./assets/favicon.png",
+        "config": {
+            "firebase": {
+                "apiKey": "AIzaSyBBvra8D7WZCrOGfztxCZMunzoTVTaw1Xc",
+                "authDomain": "tiktok-clone-d6352.firebaseapp.com",
+                "projectId": "tiktok-clone-d6352",
+                "storageBucket": "tiktok-clone-d6352.appspot.com",
+                "messagingSenderId": "298384846304",
+                "appId": "1:298384846304:web:a8453e0251f3eafb210f85"
+            }
+        }
+    }
+  }
+}
