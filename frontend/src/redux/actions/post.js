@@ -10,7 +10,7 @@ import {
   orderBy
 } from "firebase/firestore";
 import { app, auth } from "../../firebase";
-import { saveMediaToStorage } from './random';
+import { saveMediaToStorage } from '../../services/random';
 import { CURRENT_USER_POSTS_UPDATE } from '../constants';
 
 export const createPost = (description, video, thumbnail) => dispatch => new Promise((resolve, reject) => {
@@ -58,7 +58,6 @@ export const getPosts = (uid) => dispatch => new Promise((resolve, reject) => {
         const id = doc.id;
         return { id, ...data }
       });
-      console.log(posts);
       dispatch({
         type: CURRENT_USER_POSTS_UPDATE,
         payload: { posts }

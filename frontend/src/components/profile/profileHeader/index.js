@@ -1,9 +1,16 @@
 import { View, Text, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { Avatar } from 'react-native-paper';
 import { buttonStyles } from '../../../styles/buttonStyles';
 import styles from './styles';
 
 export default function ProfileHeader({ user }) {
+  const navigation = useNavigation();
+
+  function handleEditProfileClick() {
+    navigation.navigate('editProfile');
+  }
+
   return (
     <View style={styles.container}>
       <Avatar.Icon size={80} icon="account" />
@@ -22,7 +29,10 @@ export default function ProfileHeader({ user }) {
           <Text style={styles.counterText}>Likes</Text>
         </View>
       </View>
-      <TouchableOpacity style={buttonStyles.grayOutlinedButton}>
+      <TouchableOpacity
+        style={buttonStyles.grayOutlinedButton}
+        onPress={handleEditProfileClick}
+      >
         <Text>Edit Profile</Text>
       </TouchableOpacity>
     </View>

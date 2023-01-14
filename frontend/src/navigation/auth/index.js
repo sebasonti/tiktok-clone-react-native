@@ -5,6 +5,8 @@ import { View, Text } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import { userAuthStateListener } from '../../redux/actions/auth';
 import AuthScreen from '../../screens/auth';
+import EditProfileScreen from '../../screens/profile/edit';
+import EditProfileFieldScreen from '../../screens/profile/edit/field';
 import SavePostScreen from '../../screens/savePost';
 import HomeScreen from '../home';
 
@@ -31,6 +33,8 @@ export default function Route() {
           <>
             <Stack.Screen name='home' component={HomeScreen} options={{ headerShown: false }} />
             <Stack.Screen name='savePost' component={SavePostScreen} options={{ headerShown: false }} />
+          <Stack.Screen name='editProfile' component={EditProfileScreen} options={{ headerShown: false }} />
+          <Stack.Screen name='editProfileField' component={EditProfileFieldScreen} options={{ headerShown: false }} />
           </>
         }
       </Stack.Navigator>

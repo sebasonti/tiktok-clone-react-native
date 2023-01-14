@@ -4,7 +4,7 @@ import {
   uploadBytes,
   getDownloadURL
 } from "firebase/storage";
-import { app } from '../../firebase';
+import { app } from '../firebase';
 
 export const saveMediaToStorage = (media, path) => new Promise((resolve, reject) => {
   const storage = getStorage(app);
