@@ -108,7 +108,8 @@ export default function CameraScreen() {
           type={cameraType}
           flashMode={cameraFlash}
           onCameraReady={() => setIsCameraReady(true)}
-        /> : null}
+        /> : null
+      }
 
       <View style={styles.sideBarContainer}>
         <TouchableOpacity
